@@ -4,21 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:Api": "npx mocha ./api-test/*.js --timeout=30000",
+    "test:Api": "npx mocha ./api-tests/*.js --timeout=30000",
     "test:Api-reporter": "npm run clean && mocha ./api-tests/*.js --timeout=30000 --reporter mochawesome",
     "clean": "rimraf mochawesome-report/"
-    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "ajv": "^8.12.0",
     "axios": "^1.4.0",
     "chai": "^4.3.7",
     "mocha": "^10.2.0"
   },
   "dependencies": {
-   "mochawesome": "^7.1.3",
+    "mochawesome": "^7.1.3",
     "rimraf": "^5.0.0"
   }
 }
