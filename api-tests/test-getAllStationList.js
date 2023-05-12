@@ -5,7 +5,7 @@ const ajv = new Ajv();
 
 const stationListschemas = require('../schemas/stationListschemas.json')
 
-describe.only ('Get station list Api request', async()=>{
+describe('Get all station list Api request', async()=>{
 
     it('should get the station list' , async()=>{
         const response = await axios.get('https://talented-visor-tick.cyclic.app/api/v1/stationList?page=1')

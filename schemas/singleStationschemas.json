@@ -1,0 +1,111 @@
+{
+   "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "singleStationViewData": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "_id": {
+                "type": "string"
+              },
+              "fid": {
+                "type": "integer"
+              },
+              "id": {
+                "type": "integer"
+              },
+              "nimi": {
+                "type": "string"
+              },
+              "Namn": {
+                "type": "string"
+              },
+              "Name": {
+                "type": "string"
+              },
+              "osoite": {
+                "type": "string"
+              },
+              "adress": {
+                "type": "string"
+              },
+              "kaupunki": {
+                "type": "string"
+              },
+              "Stad": {
+                "type": "string"
+              },
+              "operaattor": {
+                "type": "string"
+              },
+              "kapasiteet": {
+                "type": "integer"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "_id",
+              "fid",
+              "id",
+              "nimi",
+              "Namn",
+              "Name",
+              "osoite",
+              "adress",
+              "kaupunki",
+              "Stad",
+              "operaattor",
+              "kapasiteet",
+              "x",
+              "y"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "stationDepartureNum": {
+                "type": "integer"
+              },
+              "stationArrivalNum": {
+                "type": "integer"
+              },
+              "averageDistanceofstationDeparture": {
+                "type": "integer"
+              },
+              "averageDistanceofstationArrival": {
+                "type": "integer"
+              },
+              "popular5start": {
+                "type": "string"
+              },
+              "popular5end": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "stationDepartureNum",
+              "stationArrivalNum",
+              "averageDistanceofstationDeparture",
+              "averageDistanceofstationArrival",
+              "popular5start",
+              "popular5end"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "status",
+      "singleStationViewData"
+    ]
+  }

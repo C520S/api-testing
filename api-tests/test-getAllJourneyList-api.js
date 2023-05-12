@@ -4,7 +4,7 @@ const Ajv = require('ajv');
 const ajv = new Ajv();
 const journeyListschemas = require('../schemas/jourenyLIstschemas.json')
 
-describe('Get journey list Api request', async()=>{
+describe('Get all journey list Api request', async()=>{
 
     it('should get the journey list' , async()=>{
         const response = await axios.get('https://talented-visor-tick.cyclic.app/api/v1/journeys?page=1')
