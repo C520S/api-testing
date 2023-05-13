@@ -1,0 +1,216 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-13T20:51:03.273Z",
+    "end": "2023-05-13T20:51:15.817Z",
+    "duration": 12544,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "33beabb7-05b7-4ce4-bfd5-02bb28c9c28e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ef38f5b5-9ed8-4add-aba8-a22c2adb7f28",
+          "title": "Get all journey list Api request",
+          "fullFile": "C:\\学校大三课程\\Company project 2\\api-testing\\api-tests\\test-getAllJourneyList-api.js",
+          "file": "\\api-tests\\test-getAllJourneyList-api.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should get the journey list",
+              "fullTitle": "Get all journey list Api request should get the journey list",
+              "timedOut": false,
+              "duration": 5888,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await axios.get(\n  \"https://talented-visor-tick.cyclic.app/api/v1/journeys?page=1\"\n);\nchai.expect(response.status).equals(200);\nchai.expect(response.data.status).equals(\"success\");\nchai.expect(response.data.results).equals(15);\nchai.expect(response.data.data.totalPages).equal(51375);\nconst validate = ajv.compile(journeyListschemas);\nconst valid = validate(response.data);\nchai.expect(valid).to.be.true;",
+              "err": {},
+              "uuid": "28e55579-e857-4272-aaa3-ff21218e8680",
+              "parentUUID": "ef38f5b5-9ed8-4add-aba8-a22c2adb7f28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be searched for by the name Kaleva in the journey list",
+              "fullTitle": "Get all journey list Api request should be searched for by the name Kaleva in the journey list",
+              "timedOut": false,
+              "duration": 1840,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await axios.get(\n  \"https://talented-visor-tick.cyclic.app/api/v1/journeys?search=Kaleva\"\n);\nchai.expect(response.status).equals(200);\nchai.expect(response.data.status).equals(\"success\");\nchai.expect(response.data.results).equals(15);\nchai.expect(response.data.data.totalPages).equal(322);\nconst validate = ajv.compile(journeyListschemas);\nconst valid = validate(response.data);\nchai.expect(valid).to.be.true;",
+              "err": {},
+              "uuid": "3819f783-7a43-41d0-ac68-1ab271736a51",
+              "parentUUID": "ef38f5b5-9ed8-4add-aba8-a22c2adb7f28",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "28e55579-e857-4272-aaa3-ff21218e8680",
+            "3819f783-7a43-41d0-ac68-1ab271736a51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7728,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "3f68b06e-2163-4ea5-b675-68d2400e4d43",
+          "title": "Get all station list Api request",
+          "fullFile": "C:\\学校大三课程\\Company project 2\\api-testing\\api-tests\\test-getAllStationList.js",
+          "file": "\\api-tests\\test-getAllStationList.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should get the station list",
+              "fullTitle": "Get all station list Api request should get the station list",
+              "timedOut": false,
+              "duration": 399,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await axios.get(\n  \"https://talented-visor-tick.cyclic.app/api/v1/stationList?page=1\"\n);\nchai.expect(response.status).equals(200);\nchai.expect(response.data.status).equals(\"success\");\nchai.expect(response.data.results).equals(10);\nchai.expect(response.data.data.totalPages).equal(10);\nconst validate = ajv.compile(stationListschemas);\nconst valid = validate(response.data);\nchai.expect(valid).to.be.true;",
+              "err": {},
+              "uuid": "16c2f023-1c25-4cce-bcf4-10127893aa50",
+              "parentUUID": "3f68b06e-2163-4ea5-b675-68d2400e4d43",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be searched for by the name Keilalahti in the station list",
+              "fullTitle": "Get all station list Api request should be searched for by the name Keilalahti in the station list",
+              "timedOut": false,
+              "duration": 538,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await axios.get(\n  \"https://talented-visor-tick.cyclic.app/api/v1/stationList?search=Keilalahti\"\n);\nchai.expect(response.status).equals(200);\nchai.expect(response.data.status).equals(\"success\");\nchai.expect(response.data.results).equals(1);\nchai.expect(response.data.data.totalPages).equal(0);\nconst validate = ajv.compile(stationListschemas);\nconst valid = validate(response.data);\nchai.expect(valid).to.be.true;",
+              "err": {},
+              "uuid": "10f59ea7-cddf-4dea-92c9-c9560421df2b",
+              "parentUUID": "3f68b06e-2163-4ea5-b675-68d2400e4d43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "16c2f023-1c25-4cce-bcf4-10127893aa50",
+            "10f59ea7-cddf-4dea-92c9-c9560421df2b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 937,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        },
+        {
+          "uuid": "9a1affac-b450-46ad-9c64-42103d88fcec",
+          "title": "Get single station view Api request",
+          "fullFile": "C:\\学校大三课程\\Company project 2\\api-testing\\api-tests\\test-getSingleStationView.js",
+          "file": "\\api-tests\\test-getSingleStationView.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should give you the data for the single station called Mankkaanlaaksontie",
+              "fullTitle": "Get single station view Api request should give you the data for the single station called Mankkaanlaaksontie",
+              "timedOut": false,
+              "duration": 3860,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await axios.get(\n  \"https://talented-visor-tick.cyclic.app/api/v1/stationList/Mankkaanlaaksontie\"\n);\nchai.expect(response.status).equals(200);\nchai.expect(response.data.status).equals(\"success\");\nconst validate = ajv.compile(singleStationschemas);\nconst valid = validate(response.data);\nchai.expect(valid).to.be.true;",
+              "err": {},
+              "uuid": "81b9ae49-dd30-43ea-8bde-b2c3e899466d",
+              "parentUUID": "9a1affac-b450-46ad-9c64-42103d88fcec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81b9ae49-dd30-43ea-8bde-b2c3e899466d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3860,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 30000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

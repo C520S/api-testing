@@ -5,7 +5,7 @@ const ajv = new Ajv();
 
 const singleStationschemas = require("../schemas/singleStationschemas.json");
 
-describe.only("Get single station view Api request", async () => {
+describe("Get single station view Api request", async () => {
   it("should give you the data for the single station called Mankkaanlaaksontie", async () => {
     const response = await axios.get(
       "https://talented-visor-tick.cyclic.app/api/v1/stationList/Mankkaanlaaksontie"
